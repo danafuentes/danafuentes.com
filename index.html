@@ -1,13 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Just Dana</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dana Fuentes — Makeup Artist &amp; Prosthetics Specialist</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets — edit individual files in css/ -->
+  <link rel="stylesheet" href="css/variables.css" />  <!-- tokens, reset, shared -->
+  <link rel="stylesheet" href="css/nav.css" />         <!-- navigation bar -->
+  <link rel="stylesheet" href="css/hero.css" />        <!-- hero section -->
+  <link rel="stylesheet" href="css/about.css" />       <!-- about section -->
+  <link rel="stylesheet" href="css/portfolio.css" />   <!-- portfolio + booking -->
+  <link rel="stylesheet" href="css/contact.css" />     <!-- contact, footer, lightbox -->
 </head>
 <body>
-    <h1>Just Dana</h1>
-    <p>Launching soon</p>
+
+<!-- ── Navigation ── -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">Dana Fuentes</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile fullscreen menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about"     class="mmlink">About</a>
+  <a href="#portfolio" class="mmlink">Portfolio</a>
+  <a href="#contact"   class="mmlink">Contact</a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTIONS — edit content in sections/ folder
+     ══════════════════════════════════════════ -->
+
+<!-- Hero: sections/hero.html -->
+<section id="hero">
+  <div class="hero-left">
+    <h1 class="hero-name">Dana<br><em>Fuentes</em></h1>
+    <p class="hero-eyebrow">Makeup Artist · Prosthetics Specialist</p>
+    <p class="hero-desc">
+      I transform faces into stories — from editorial fashion and theatre
+      to immersive prosthetics and creature design. Based in Downtown Toronto.
+    </p>
+    <div class="hero-tags">
+      <span class="tag">Fashion</span>
+      <span class="tag">Theatre</span>
+      <span class="tag">Film &amp; TV</span>
+      <span class="tag">Prosthetics</span>
+      <span class="tag">Creature Design</span>
+    </div>
+    <a href="#portfolio" class="hero-cta">
+      View Portfolio
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-right">
+
+    <!--
+      HERO SLIDESHOW
+      Add photos by replacing each .hero-slide placeholder div with an <img> tag:
+        <img src="images/hero/01.jpg" alt="Dana Fuentes">
+      Add or remove .hero-slide divs to control how many slides appear.
+      The dots and arrows update automatically via JS.
+    -->
+    <div class="hero-slider" id="hero-slider">
+
+      <div class="hero-slide active">
+        <img src="images/hero/downtownToronto.jpg" alt="Toronto">
+        <!-- <div class="hero-placeholder">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="20" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Photo 1</span>
+        </div> -->
+      </div>
+
+      <div class="hero-slide">
+        <img src="images/hero/1_FASHION_DANA_HERNANDEZ-2313.JPG" alt="Dana Fuentes">
+        <!-- <div class="hero-placeholder">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="20" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Photo 2</span>
+        </div> -->
+      </div>
+      <div class="hero-slide">
+        <img src="images/hero/IMG_1471.jpg" alt="Dana Fuentes">
+      </div>
+    </div><!-- /hero-slider -->
+
+    <!-- Prev / Next arrows -->
+    <button class="hero-arrow hero-prev" id="hero-prev" aria-label="Previous photo">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="hero-arrow hero-next" id="hero-next" aria-label="Next photo">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <!-- Dot indicators -->
+    <div class="hero-dots" id="hero-dots"></div>
+
+    <div class="hero-badge">
+      <p>Based in</p>
+      <strong>Downtown Toronto</strong>
+    </div>
+
+  </div>
+</section>
+
+<!-- About: sections/about.html -->
+<section id="about">
+  <div class="about-body reveal">
+    <p class="about-label">About Me</p>
+    <h2 class="about-heading">Makeup, character, <em>transformation</em></h2>
+    <p>Hi, I'm Dana — a makeup artist and prosthetics specialist based in Downtown
+    Toronto. I'm currently studying at the Canadian Make-up Institute (CMU), deepening
+    my craft across every discipline I love.</p>
+    <p>My work spans fashion, theatre, film and TV, prosthetics, and creature design.
+    I'm drawn to the full range — from a clean editorial look to a fully sculpted
+    character build — and I love the problem-solving that comes with each project.</p>
+    <p>I'm always looking to collaborate, learn, and grow. If you have a project in
+    mind, I'd love to hear about it.</p>
+    <div class="about-specialties">
+      <span class="spec-chip highlight">Prosthetics</span>
+      <span class="spec-chip highlight">Creature Design</span>
+      <span class="spec-chip">Fashion</span>
+      <span class="spec-chip">Theatre</span>
+      <span class="spec-chip">Film &amp; TV</span>
+    </div>
+  </div>
+  <div class="about-image-block reveal">
+    <div class="about-accent-dot"></div>
+    <div class="about-img-frame">
+      
+        <!-- ADD PORTRAIT — replace this inner div with: -->
+        <img src="images/about/IMG_1481.jpg" alt="Dana Fuentes">
+     
+      <!-- <div style="display:flex;flex-direction:column;align-items:center;gap:.8rem;
+                  color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect x="3" y="3" width="34" height="34" rx="4" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="20" cy="16" r="5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8 36c0-6.627 5.373-12 12-12s12 5.373 12 12"
+                stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <span>Add portrait photo</span>
+      </div> -->
+    </div>
+    <div class="about-accent-box"></div>
+  </div>
+</section>
+
+<!-- Portfolio: sections/portfolio.html -->
+<section id="portfolio">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Work</p>
+    <h2 class="section-title">The <em>Portfolio</em></h2>
+  </div>
+
+  <div class="portfolio-tabs reveal">
+    <button class="ptab active" data-cat="fashion">Fashion</button>
+    <button class="ptab" data-cat="theatre">Theatre</button>
+    <button class="ptab" data-cat="film">Film &amp; TV</button>
+    <button class="ptab" data-cat="prosthetics">Prosthetics</button>
+    <button class="ptab" data-cat="creature">Creature Design</button>
+  </div>
+
+  <!-- FASHION -->
+  <div class="portfolio-panel active" data-panel="fashion">
+    <div class="gallery-grid masonry">
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <img src="images/fashion/1.jpg" alt="Photo 1" class="gallery-img">
+
+        <!-- <div class="img-placeholder">
+          <span class="cs-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="cs-badge">
+            Coming Soon
+          </span>
+          <span class="cs-text">
+            Photo 1
+          </span>
+        </div> -->
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-label">
+            Fashion · 01
+          </span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/fashion/2.jpg" alt="Photo 2" class="gallery-img">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 2</span></div> -->
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 3</span></div> -->
+        <img src="images/fashion/3.jpg" alt="Photo 3" class="gallery-img">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 03</span></div>
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 4</span></div> -->
+        <img src="images/fashion/4.jpg" alt="Photo 4" class="gallery-img" style="object-position: 50% 20%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 04</span></div></div>
+      
+        <div class="gallery-item wide" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 5</span></div> -->
+        <img src="images/fashion/5.jpg" alt="Photo 5" class="gallery-img" style=" object-position: 50% 55%">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 05</span></div>
+      </div>
+
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 3</span></div> -->
+        <img src="images/fashion/6.jpg" alt="Photo 6" class="gallery-img">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 06</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 3</span></div> -->
+        <img src="images/fashion/7.jpg" alt="Photo 7" class="gallery-img">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 07</span></div>
+      </div>      
+      
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 4</span></div> -->
+        <img src="images/fashion/8.jpg" alt="Photo 8" class="gallery-img" style="object-position: 50% 10%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 08</span></div>
+      </div>
+      
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 5</span></div> -->
+        <img src="images/fashion/9.jpg" alt="Photo 9" class="gallery-img">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 09</span></div>
+      </div>
+
+       <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 3</span></div> -->
+        <img style="object-fit: cover; object-position: center;" src="images/fashion/10.jpg" alt="Photo 10" class="gallery-img">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 10</span></div>
+      </div>
+      
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 4</span></div> -->
+        <img src="images/fashion/11.jpg" alt="Photo 11" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 11</span></div>
+      </div>     
+
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 6</span></div> -->
+        <img src="images/fashion/12.jpg" alt="Photo 12" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 12</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THEATRE -->
+  <div class="portfolio-panel" data-panel="theatre">
+    <div class="gallery-grid cols-3">
+      
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div> -->
+        <img src="images/theatre/1.jpg" alt="Photo 01" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div> -->
+        <img src="images/theatre/2.jpg" alt="Photo 02" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div> -->
+        <img src="images/theatre/3.jpg" alt="Photo 03" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>
+       <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div> -->
+        <img src="images/theatre/4.jpg" alt="Photo 04" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>                 
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div> -->
+        <img src="images/theatre/5.jpg" alt="Photo 05" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILM & TV -->
+  <div class="portfolio-panel" data-panel="film">
+    <div class="gallery-grid cols-3">
+  
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/film-tv/1.jpg" alt="Photo 01" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/film-tv/2.jpg" alt="Photo 02" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>      
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/film-tv/3.jpg" alt="Photo 03" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/film-tv/4.jpg" alt="Photo 04" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROSTHETICS -->
+  <div class="portfolio-panel" data-panel="prosthetics">
+    <div class="gallery-grid masonry">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/prosthetics/1.jpg" alt="Photo 01" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/prosthetics/2.jpg" alt="Photo 02" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>      
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/prosthetics/3.jpg" alt="Photo 03" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/prosthetics/4.jpg" alt="Photo 04" class="gallery-img" style="object-position: 50% 40%;">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CREATURE DESIGN -->
+  <div class="portfolio-panel" data-panel="creature">
+    <div class="gallery-grid cols-2">
+      <div class="gallery-item" onclick="openLightbox(this)"><div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 1</span></div><div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 01</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 2</span></div><div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 02</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 3</span></div><div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 03</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><div class="img-placeholder"><span class="cs-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 16l5-5 3 3 4-5 8 7" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="cs-badge">Coming Soon</span><span class="cs-text">Photo 4</span></div><div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 04</span></div></div>
+    </div>
+  </div>
+
+  <!-- Booking callout -->
+  <div class="prosthetics-callout reveal">
+    <div>
+      <h3>Custom Prosthetics &amp; <em>Creature Builds</em></h3>
+      <p>From lifecasting and foam latex to silicone work and full creature builds — I design
+      and apply custom prosthetics for screen, stage, and special projects. Every piece is
+      built to hold up under camera and live conditions.</p>
+    </div>
+    <!--
+      FORMSPREE SETUP (one-time, free):
+      1. Go to https://formspree.io and sign up
+      2. Create a new form → copy your form ID (looks like "xpwzabcd")
+      3. Replace YOUR_FORM_ID below with that ID
+      That's it — Formspree delivers submissions straight to danafh4@gmail.com.
+    -->
+    <form class="booking-form" id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- Formspree config: reply-to sender, custom subject -->
+      <input type="hidden" name="_replyto" value="">
+      <input type="hidden" name="_subject" id="form-subject" value="Booking Enquiry">
+      <!-- Honeypot spam trap — leave empty -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="form-row">
+        <label>Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="your@email.com" required
+                 oninput="document.querySelector('[name=_replyto]').value=this.value">
+        </label>
+      </div>
+      <label>I'm interested in
+        <!-- Selected categories are written into this hidden field on submit -->
+        <input type="hidden" name="interested_in" id="interested-in-field">
+        <div class="form-cats">
+          <button type="button" class="fcat" data-val="Fashion">Fashion</button>
+          <button type="button" class="fcat" data-val="Theatre">Theatre</button>
+          <button type="button" class="fcat" data-val="Film &amp; TV">Film &amp; TV</button>
+          <button type="button" class="fcat" data-val="Prosthetics">Prosthetics</button>
+          <button type="button" class="fcat" data-val="Creature Design">Creature Design</button>
+        </div>
+      </label>
+      <label>Message
+        <textarea name="message" placeholder="Tell me a bit about your project…"></textarea>
+      </label>
+      <button type="submit" class="submit-btn" id="submit-btn">
+        Send enquiry
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="form-success" id="form-success">
+        Thanks! I'll be in touch soon.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Contact: sections/contact.html -->
+<section id="contact">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Get in touch</p>
+    <h2 class="section-title">Let's create <em>together</em></h2>
+  </div>
+  <p class="section-sub reveal">
+    Available for editorial shoots, productions, theatre runs, and custom prosthetics
+    work across Toronto and beyond. I'd love to work together.
+  </p>
+  <div class="contact-cards reveal">
+    <a href="mailto:danafh4@gmail.com" class="contact-card email">
+      <div class="cc-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M2 6l7 5 7-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div><p class="cc-label">Email</p><p class="cc-value">
+        <!-- danafh4@gmail.com -->
+      </p></div>
+    </a>
+    <a href="https://instagram.com/ddfh9_" target="_blank" rel="noopener" class="contact-card insta">
+      <div class="cc-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="2" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="13" cy="5" r=".8" fill="currentColor"/>
+        </svg>
+      </div>
+      <div><p class="cc-label">Instagram</p><p class="cc-value">
+        <!-- @ddfh9_ -->
+      </p></div>
+    </a>
+  </div>
+  <p class="location-line reveal">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M7 1C4.791 1 3 2.791 3 5c0 3.5 4 8 4 8s4-4.5 4-8c0-2.209-1.791-4-4-4z" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="7" cy="5" r="1.2" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    Downtown Toronto, Ontario
+  </p>
+</section>
+
+<footer>
+  <span class="foot-logo">Dana Fuentes</span>
+  <span class="foot-copy">&copy; 2025 Dana Fuentes. All rights reserved.</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS — edit individual files in js/
+     ══════════════════════════════════════════ -->
+<script src="js/reveal.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/hero-slider.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/consult.js"></script>
+<script src="js/lightbox.js"></script>
+
 </body>
 </html>

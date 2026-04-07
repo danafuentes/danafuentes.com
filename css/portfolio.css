@@ -1,0 +1,191 @@
+/* ============================================================
+   portfolio.css — Portfolio tabs, gallery grids, callout block
+   ============================================================ */
+
+#portfolio { padding: var(--section-pad); background: var(--beige); }
+
+/* ── Category tabs ── */
+.portfolio-tabs {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: .5rem; margin-bottom: 4rem;
+}
+.ptab {
+  font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+  padding: .55rem 1.4rem; border-radius: 999px;
+  border: 1.5px solid var(--beige-dk);
+  background: transparent; color: var(--text-lt);
+  cursor: pointer; transition: all .25s;
+}
+.ptab:hover, .ptab.active {
+  background: var(--pink); border-color: var(--pink); color: #fff;
+}
+.ptab[data-cat="prosthetics"]:hover,
+.ptab[data-cat="prosthetics"].active {
+  background: var(--pink-dk); border-color: var(--pink-dk);
+}
+.ptab[data-cat="creature"]:hover,
+.ptab[data-cat="creature"].active {
+  background: var(--dark); border-color: var(--dark);
+}
+
+/* ── Panels ── */
+.portfolio-panel { display: none; }
+.portfolio-panel.active { display: block; }
+
+/* ── Gallery grids ── */
+.gallery-grid { display: grid; gap: 1.2rem; }
+.gallery-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.gallery-grid.masonry {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+}
+.gallery-grid.masonry .tall { grid-row: span 2; }
+.gallery-grid.masonry .wide { grid-column: span 2; }
+
+/* ── Gallery items ── */
+.gallery-item {
+  position: relative; overflow: hidden;
+  border-radius: .4rem; background: var(--pink-xs); cursor: pointer;
+}
+.gallery-grid:not(.masonry) .gallery-item { aspect-ratio: 3/4; }
+.gallery-grid.masonry .gallery-item { height: 100%; }
+
+.gallery-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+  object-position: top;
+  /* object-position: center; */
+  transition: transform .6s cubic-bezier(.25,.46,.45,.94);
+  
+}
+.gallery-item:hover img { transform: scale(1.06); }
+
+.gallery-item-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(28,26,27,.78) 0%, transparent 55%);
+  opacity: 0; transition: opacity .35s;
+  display: flex; align-items: flex-end; padding: 1.5rem;
+}
+.gallery-item:hover .gallery-item-overlay { opacity: 1; }
+.gallery-item-label { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.88); }
+
+/* Placeholder tile — "Coming Soon" */
+.img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: .9rem;
+  background: var(--pink-xs);
+  transition: background .3s;
+}
+.img-placeholder .cs-icon { opacity: .28; color: var(--pink-dk); }
+.img-placeholder .cs-text {
+  font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--pink-dk); opacity: .45;
+}
+.img-placeholder .cs-badge {
+  font-family: var(--font-display); font-size: 1.05rem; font-style: italic;
+  font-weight: 300; color: var(--pink); opacity: .65;
+}
+.gallery-item:hover .img-placeholder { background: var(--pink-lt); }
+.gallery-item:hover .img-placeholder .cs-icon,
+.gallery-item:hover .img-placeholder .cs-text,
+.gallery-item:hover .img-placeholder .cs-badge { opacity: 1; }
+
+/* ── Prosthetics / booking callout ── */
+.prosthetics-callout {
+  margin: 6rem 0 0; padding: 4rem 5rem;
+  background: var(--pink-dk); border-radius: .8rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: center;
+  position: relative; overflow: hidden;
+}
+.prosthetics-callout::before {
+  content: ''; position: absolute; right: -5%; top: -40%;
+  width: 350px; height: 350px; border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+.prosthetics-callout h3 {
+  font-family: var(--font-display); font-size: 2.2rem;
+  font-weight: 300; color: #fff; margin-bottom: .8rem;
+}
+.prosthetics-callout h3 em { font-style: italic; color: var(--pink-lt); }
+.prosthetics-callout > div:first-child p {
+  font-size: .85rem; font-weight: 300; line-height: 1.85;
+  color: rgba(255,255,255,.65); max-width: 500px;
+}
+
+/* ── Booking form ── */
+.booking-form { display: flex; flex-direction: column; gap: 1rem; }
+
+.booking-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+
+.booking-form label {
+  font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.5); display: flex; flex-direction: column; gap: .4rem;
+}
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  font-family: var(--font-body); font-size: .82rem; font-weight: 300;
+  color: #fff; background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22); border-radius: .35rem;
+  padding: .65rem .9rem; outline: none;
+  transition: border-color .2s, background .2s;
+  width: 100%;
+}
+.booking-form input::placeholder,
+.booking-form textarea::placeholder { color: rgba(255,255,255,.3); }
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form select:focus {
+  border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.15);
+}
+.booking-form select option { background: var(--pink-dk); color: #fff; }
+.booking-form textarea { resize: vertical; min-height: 80px; }
+
+/* Category pills inside form */
+.form-cats { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .2rem; }
+.fcat {
+  font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+  padding: .32rem .8rem; border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,.25);
+  background: transparent; color: rgba(255,255,255,.6);
+  cursor: pointer; transition: all .2s;
+}
+.fcat:hover { border-color: rgba(255,255,255,.65); color: #fff; }
+.fcat.selected { background: rgba(255,255,255,.2); border-color: #fff; color: #fff; }
+
+.booking-form .submit-btn {
+  display: inline-flex; align-items: center; gap: .7rem;
+  font-family: var(--font-body); font-size: .7rem;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: #fff; background: transparent;
+  padding: .9rem 2rem; border: 1.5px solid rgba(255,255,255,.4);
+  border-radius: 999px; cursor: pointer; align-self: flex-start;
+  transition: all .3s; margin-top: .3rem;
+}
+.booking-form .submit-btn:hover { background: rgba(255,255,255,.15); border-color: #fff; }
+
+.form-success {
+  display: none; padding: 1rem 1.4rem;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+  border-radius: .4rem; font-size: .82rem; color: rgba(255,255,255,.85);
+  font-style: italic;
+}
+.form-success.visible { display: block; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  #portfolio { padding: var(--section-pad-sm); }
+  .gallery-grid.cols-3, .gallery-grid.masonry { grid-template-columns: repeat(2,1fr); }
+  .gallery-grid.masonry { grid-auto-rows: 200px; }
+  .gallery-grid.masonry .wide { grid-column: span 1; }
+  .prosthetics-callout { grid-template-columns: 1fr; padding: 3rem 2rem; }
+}
+@media (max-width: 600px) {
+  .gallery-grid.cols-3, .gallery-grid.masonry, .gallery-grid.cols-2 { grid-template-columns: 1fr; }
+  .gallery-grid.masonry .tall { grid-row: span 1; }
+}

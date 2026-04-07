@@ -1,0 +1,60 @@
+/* ============================================================
+   variables.css — Design tokens for Dana Fuentes portfolio
+   Edit colour palette and typography here.
+   ============================================================ */
+
+:root {
+  /* ── Palette ── */
+  --pink:       #d4737a;   /* primary accent — used for CTAs, headings, highlights */
+  --pink-lt:    #f0c4c7;   /* soft tint — backgrounds, glows */
+  --pink-xs:    #fdf0f1;   /* near-white pink — section backgrounds */
+  --pink-dk:    #a85059;   /* deep rose — hover states, strong accents */
+
+  --beige:      #faf5ee;   /* page base background */
+  --beige-md:   #ede4d5;   /* borders, dividers */
+  --beige-dk:   #cfc0a8;   /* muted borders */
+
+  --green:      #4a6b57;   /* secondary accent — used sparingly */
+  --green-lt:   #7a9e8a;
+  --green-xs:   #eaf0ec;
+
+  --dark:       #1c1a1b;   /* near-black for dark sections */
+  --text:       #2c2528;   /* body text */
+  --text-lt:    #7a6e72;   /* muted text */
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'Jost', sans-serif;
+
+  /* ── Spacing ── */
+  --section-pad:  8rem 5rem;
+  --section-pad-sm: 5rem 2rem;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--beige);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── Shared reveal animation ── */
+.reveal { opacity: 1; transform: translateY(0); transition: opacity .7s ease, transform .7s ease; }
+.js-reveal .reveal { opacity: 0; transform: translateY(28px); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Shared section labels ── */
+.section-eyebrow {
+  font-size: .66rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--pink); margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  font-weight: 300; line-height: 1.1; color: var(--dark);
+}
+.section-title em { font-style: italic; color: var(--pink); }
+.section-header { text-align: center; margin-bottom: 5rem; }

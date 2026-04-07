@@ -1,0 +1,285 @@
+<!-- ============================================================
+     sections/portfolio.html — Portfolio section with 5 category tabs
+
+     HOW TO ADD PHOTOS for each category:
+       1. Put your image files in the matching images/ subfolder:
+            images/fashion/    images/theatre/    images/film/
+            images/prosthetics/    images/creature/
+       2. In each gallery-item, uncomment the <img> tag and fill in the filename.
+       3. The placeholder div beneath it can then be deleted.
+     ============================================================ -->
+
+<section id="portfolio">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Work</p>
+    <h2 class="section-title">The <em>Portfolio</em></h2>
+  </div>
+
+  <!-- ── CATEGORY TABS ── -->
+  <div class="portfolio-tabs reveal">
+    <button class="ptab active" data-cat="fashion">Fashion</button>
+    <button class="ptab" data-cat="theatre">Theatre</button>
+    <button class="ptab" data-cat="film">Film &amp; TV</button>
+    <button class="ptab" data-cat="prosthetics">Prosthetics</button>
+    <button class="ptab" data-cat="creature">Creature Design</button>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       FASHION
+       ════════════════════════════════════════ -->
+  <div class="portfolio-panel active" data-panel="fashion">
+    <div class="gallery-grid masonry">
+
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/01.jpg" alt="Fashion look 1"> -->
+        <div class="img-placeholder">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span>Photo 1</span>
+        </div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 01</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/02.jpg" alt="Fashion look 2"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 2</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/03.jpg" alt="Fashion look 3"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 3</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 03</span></div>
+      </div>
+
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/04.jpg" alt="Fashion look 4"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 4</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 04</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/05.jpg" alt="Fashion look 5"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 5</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 05</span></div>
+      </div>
+
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <img src="images/fashion/06.jpg" alt="Fashion look 6"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 6</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Fashion · 06</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       THEATRE
+       ════════════════════════════════════════ -->
+  <div class="portfolio-panel" data-panel="theatre">
+    <div class="gallery-grid cols-3">
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/01.jpg" alt="Theatre 1"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 1</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 01</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/02.jpg" alt="Theatre 2"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 2</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/03.jpg" alt="Theatre 3"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 3</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 03</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/04.jpg" alt="Theatre 4"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 4</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 04</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/05.jpg" alt="Theatre 5"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 5</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 05</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/theatre/06.jpg" alt="Theatre 6"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 6</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Theatre · 06</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       FILM & TV
+       ════════════════════════════════════════ -->
+  <div class="portfolio-panel" data-panel="film">
+    <div class="gallery-grid cols-3">
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/01.jpg" alt="Film & TV 1"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 1</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 01</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/02.jpg" alt="Film & TV 2"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 2</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/03.jpg" alt="Film & TV 3"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 3</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 03</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/04.jpg" alt="Film & TV 4"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 4</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 04</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/05.jpg" alt="Film & TV 5"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 5</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 05</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/film/06.jpg" alt="Film & TV 6"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 6</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Film &amp; TV · 06</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       PROSTHETICS
+       ════════════════════════════════════════ -->
+  <div class="portfolio-panel" data-panel="prosthetics">
+    <div class="gallery-grid masonry">
+
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/01.jpg" alt="Prosthetics 1"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 1</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 01</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/02.jpg" alt="Prosthetics 2"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 2</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/03.jpg" alt="Prosthetics 3"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 3</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 03</span></div>
+      </div>
+
+      <div class="gallery-item wide" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/04.jpg" alt="Prosthetics 4"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 4</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 04</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/05.jpg" alt="Prosthetics 5"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 5</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 05</span></div>
+      </div>
+
+      <div class="gallery-item tall" onclick="openLightbox(this)">
+        <!-- <img src="images/prosthetics/06.jpg" alt="Prosthetics 6"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 6</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Prosthetics · 06</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       CREATURE DESIGN
+       ════════════════════════════════════════ -->
+  <div class="portfolio-panel" data-panel="creature">
+    <div class="gallery-grid cols-2">
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/creature/01.jpg" alt="Creature Design 1"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 1</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 01</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/creature/02.jpg" alt="Creature Design 2"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 2</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 02</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/creature/03.jpg" alt="Creature Design 3"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 3</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 03</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!-- <img src="images/creature/04.jpg" alt="Creature Design 4"> -->
+        <div class="img-placeholder"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 20l6-6 4 4 5-7 9 10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Photo 4</span></div>
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Creature · 04</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Booking callout ── -->
+  <div class="prosthetics-callout reveal">
+    <div>
+      <h3>Custom Prosthetics &amp; <em>Creature Builds</em></h3>
+      <p>From lifecasting and foam latex to silicone work and full creature builds — I design
+      and apply custom prosthetics for screen, stage, and special projects. Every piece is
+      built to hold up under camera and live conditions.</p>
+    </div>
+
+    <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <label>Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </label>
+      </div>
+      <label>I'm interested in
+        <div class="form-cats">
+          <button type="button" class="fcat" data-val="Fashion">Fashion</button>
+          <button type="button" class="fcat" data-val="Theatre">Theatre</button>
+          <button type="button" class="fcat" data-val="Film &amp; TV">Film &amp; TV</button>
+          <button type="button" class="fcat" data-val="Prosthetics">Prosthetics</button>
+          <button type="button" class="fcat" data-val="Creature Design">Creature Design</button>
+        </div>
+      </label>
+      <label>Message
+        <textarea name="message" placeholder="Tell me a bit about your project…"></textarea>
+      </label>
+      <button type="submit" class="submit-btn">
+        Send enquiry
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="form-success" id="form-success">
+        Thanks! I'll be in touch soon.
+      </div>
+    </form>
+  </div>
+</section>
