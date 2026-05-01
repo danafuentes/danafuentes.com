@@ -23,10 +23,10 @@
   padding: 1.3rem 2rem; background: #fff;
   border: 1px solid var(--beige-md); border-radius: .5rem;
   text-decoration: none; color: var(--text); font-size: .82rem;
-  transition: all .25s; box-shadow: 0 2px 12px rgba(28,26,27,.04);
+  transition: all .25s; box-shadow: 0 2px 12px rgba(84,84,84,.04);
 }
 .contact-card:hover {
-  border-color: var(--pink); box-shadow: 0 4px 24px rgba(212,115,122,.15);
+  border-color: var(--pink); box-shadow: 0 4px 24px rgba(206,171,178,.25);
   transform: translateY(-2px);
 }
 .cc-icon {
@@ -47,7 +47,7 @@
   color: var(--text-lt); display: flex; align-items: center;
   justify-content: center; gap: .5rem;
 }
-.location-line svg { color: var(--pink); }
+.location-line svg { color: var(--pink-dk); }
 
 /* ── Footer ── */
 footer {
@@ -64,7 +64,7 @@ footer {
 /* ── Lightbox ── */
 .lightbox {
   display: none; position: fixed; inset: 0;
-  background: rgba(28,26,27,.93); z-index: 200;
+  background: rgba(84,84,84,.93); z-index: 200;
   align-items: center; justify-content: center;
 }
 .lightbox.open { display: flex; }

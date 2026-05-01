@@ -9,11 +9,11 @@
   background: var(--dark); color: #fff;
   position: relative; overflow: hidden;
 }
-/* Pink glow accent */
+/* Blush glow accent */
 #about::before {
   content: ''; position: absolute; top: -20%; right: -10%;
   width: 480px; height: 480px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,115,122,.15) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(252,213,221,.12) 0%, transparent 65%);
 }
 
 .about-label {
@@ -31,7 +31,7 @@
   font-size: clamp(2.4rem, 3.5vw, 3.6rem);
   font-weight: 300; line-height: 1.15; margin-bottom: 2.5rem; color: #fff;
 }
-.about-heading em { font-style: italic; color: var(--pink); }
+.about-heading em { font-style: italic; color: var(--pink-lt); }
 
 .about-body p {
   font-size: .88rem; font-weight: 300; line-height: 2;
@@ -46,7 +46,7 @@
   color: rgba(255,255,255,.45);
 }
 .spec-chip.highlight {
-  background: rgba(212,115,122,.18); border-color: var(--pink);
+  background: rgba(252,213,221,.15); border-color: var(--pink-lt);
   color: var(--pink-lt);
 }
 
@@ -56,7 +56,7 @@
 .about-accent-dot {
   position: absolute; top: -1.2rem; left: -1.2rem;
   width: 90px; height: 90px; border-radius: 50%;
-  background: var(--pink); opacity: .15;
+  background: var(--pink); opacity: .25;
 }
 
 .about-img-frame {
@@ -69,7 +69,7 @@
 .about-accent-box {
   position: absolute; bottom: -2rem; right: -2rem;
   width: 160px; height: 160px;
-  border: 2px solid var(--pink); border-radius: .5rem; opacity: .2;
+  border: 2px solid var(--pink); border-radius: .5rem; opacity: .25;
 }
 
 @media (max-width: 900px) {

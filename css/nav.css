@@ -6,7 +6,7 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.4rem 3rem;
-  background: rgba(250, 245, 238, 0.9);
+  background: rgba(250, 247, 248, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--beige-md);
   transition: padding .3s;
@@ -17,7 +17,7 @@ nav.scrolled { padding: 1rem 3rem; }
   font-family: var(--font-display);
   font-size: 1.35rem; font-weight: 400;
   letter-spacing: .12em; text-transform: uppercase;
-  color: var(--pink-dk); text-decoration: none;
+  color: var(--dark); text-decoration: none;
 }
 
 .nav-links { display: flex; gap: 2.4rem; list-style: none; }
@@ -30,7 +30,7 @@ nav.scrolled { padding: 1rem 3rem; }
   content: ''; position: absolute; bottom: 0; left: 0;
   width: 0; height: 1px; background: var(--pink); transition: width .3s;
 }
-.nav-links a:hover { color: var(--pink-dk); }
+.nav-links a:hover { color: var(--dark); }
 .nav-links a:hover::after { width: 100%; }
 
 /* Hamburger */
@@ -46,7 +46,7 @@ nav.scrolled { padding: 1rem 3rem; }
 /* Mobile fullscreen menu */
 .mobile-menu {
   display: none; position: fixed; inset: 0;
-  background: rgba(250, 245, 238, 0.96);
+  background: rgba(250, 247, 248, 0.97);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   z-index: 99;
@@ -59,7 +59,7 @@ nav.scrolled { padding: 1rem 3rem; }
   color: var(--text-lt); text-decoration: none;
   transition: color .2s;
 }
-.mobile-menu a:hover { color: var(--pink); }
+.mobile-menu a:hover { color: var(--pink-dk); }
 
 @media (max-width: 900px) {
   nav { padding: 1.2rem 1.8rem; }
